@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const itemWidth = items[0].offsetWidth + 20; // Include margin
         const offset = -currentIndex * itemWidth;
 
-        carouselInner.style.transition = 'transform 0.5s ease';
+        carouselInner.style.transition = 'transform 0.8s ease';
         carouselInner.style.transform = `translateX(${offset}px)`;
 
         // Reset to start for infinite effect
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Move carousel every 3 seconds
-    setInterval(moveCarousel, 3000);
+    // Move carousel every 5 seconds
+    setInterval(moveCarousel, 5000);
 
     // Handle window resize
     window.addEventListener('resize', () => {
