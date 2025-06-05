@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #000000, #8b0000);
+    color: #ffffff;
+    animation: backgroundTransition 10s ease infinite;
+    min-height: 100vh;
+}
+
+@keyframes backgroundTransition {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    text-align: center;
+    padding: clamp(1rem, 4vw, 2rem);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: #ffd700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.hero-section {
+    text-align: center;
+    padding: clamp(2rem, 5vw, 3rem);
+    background: rgba(255, 255, 255, 0.1);
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.hero-section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #cccccc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quiz-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: clamp(1rem, 4vw, 2rem);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.quiz-section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #ffd700;
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background: #ffd700;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+#quiz-container {
+    min-height: 200px;
+}
+
+#question {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.option {
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #cccccc;
+}
+
+.option:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+}
+
+.option.selected {
+    background: #ffd700;
+    color: #000000;
+}
+
+.option.correct {
+    background: #28a745;
+    color: #ffffff;
+}
+
+.option.incorrect {
+    background: #dc3545;
+    color: #ffffff;
+}
+
+#next-button {
+    padding: 0.75rem 1.5rem;
+    background: #ffd700;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+#next-button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+#next-button:hover:not(:disabled) {
+    background: #ffffff;
+    color: #8b0000;
+}
+
+#results h3 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+#result-text {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #cccccc;
+    margin-bottom: 1rem;
+}
+
+#result-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.share-buttons {
+    margin: 2rem 0;
+}
+
+.share-buttons h4 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.share-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    background: #ffd700;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.share-button:hover {
+    background: #ffffff;
+    color: #8b0000;
+}
+
+#related-post {
+    display: inline-block;
+    margin: 1rem 0;
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+#related-post:hover {
+    color: #ffffff;
+}
+
+#restart-button {
+    padding: 0.75rem 1.5rem;
+    background: #ffd700;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+#restart-button:hover {
+    background: #ffffff;
+    color: #8b0000;
+}
+
+.about-author {
+    padding: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 1rem 0;
+}
+
+.about-author h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.about-author p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    max-width:
+}
+
+footer {
+    text-align: center;
+    padding: clamp(1rem, 4vw, 2rem);
+    background: #000000;
+}
+
+.social-media {
+    margin-bottom: 1rem;
+}
+
+.social-media h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 0.5rem;
+    color: #ffd700;
+}
+
+.social-media a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 clamp(0.5rem, 2vw, 1rem);
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ffd700;
+}
+
+footer p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .blog-post {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .quiz-cta {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .post-content h1 {
+        font-size: clamp(1.5rem, 3.5vw, 2rem);
+    }
+
+    .content-image {
+        max-width: 100%;
+    }
+
+    .quiz-cta .cta-button {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        padding: 0.5rem 1rem;
+    }

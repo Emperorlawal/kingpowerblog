@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #000000, #8b0000);
+    color: #ffffff;
+    animation: backgroundTransition 10s ease infinite;
+    min-height: 100vh;
+}
+
+@keyframes backgroundTransition {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    text-align: center;
+    padding: clamp(1rem, 4vw, 2rem);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: #ffd700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.blog-post {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.post-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: clamp(1rem, 3vw, 2rem);
+    border-radius: 10px;
+}
+
+.post-content h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.post-meta p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #cccccc;
+    margin-bottom: 1rem;
+}
+
+.post-description {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.post-body {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.post-body h2, .post-body h3 {
+    color: #ffd700;
+    margin: 1rem 0 0.5rem;
+}
+
+.post-body h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+.post-body h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+.post-body p {
+    margin-bottom: 1rem;
+}
+
+.post-body ul {
+    margin: 0.5rem 0 1rem 2rem;
+    list-style: disc;
+}
+
+.content-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin: 1rem 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quiz-cta {
+    text-align: center;
+    margin: 2rem 0;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.quiz-cta .cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #ffd700;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.quiz-cta .cta-button:hover {
+    background: #ffffff;
+    color: #8b0000;
+    transform: scale(1.05);
+}
+
+.quiz-cta p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #cccccc;
+    margin-top: 0.5rem;
+}
+
+.share-buttons {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.share-buttons h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.share-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    background: #ffd700;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.share-button:hover {
+    background: #ffffff;
+    color: #8b0000;
+}
+
+.comments-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: clamp(1rem, 3vw, 2rem);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.comments-section h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#comment-form label {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #cccccc;
+}
+
+#comment-form input, #comment-form textarea {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #ffffff;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+#comment-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#comment-form button {
+    padding: 0.75rem;
+    background: #ffd700;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+#comment-form button:hover {
+    background: #ffffff;
+    color: #8b0000;
+}
+
+#comments-list {
+    margin-top: 1rem;
+}
+
+.comment {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.comment p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #cccccc;
+}
+
+.comment .comment-meta {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    color: #999;
+    margin-bottom: 0.5rem;
+}
+
+.about-author {
+    padding: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 1rem 0;
+}
+
+.about-author h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.about-author p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    max-width: 600px;
+    margin: 0 auto;
+    color: #cccccc;
+}
+
+footer {
+    text-align: center;
+    padding: clamp(1rem, 4vw, 2rem);
+    background: #000000;
+}
+
+.social-media {
+    margin-bottom: 1rem;
+}
+
+.social-media h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 0.5rem;
+    color: #ffd700;
+}
+
+.social-media a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 clamp(0.5rem, 2vw, 1rem);
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ffd700;
+}
+
+footer p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .blog-post {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .quiz-cta {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .post-content h1 {
+        font-size: clamp(1.5rem, 3.5vw, 2rem);
+    }
+
+    .content-image {
+        max-width: 100%;
+    }
+
+    .quiz-cta .cta-button {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        padding: 0.5rem 1rem;
+    }

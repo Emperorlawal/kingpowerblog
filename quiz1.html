@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your knowledge of the 2022 FIFA World Cup with King Power Blog's fun quiz. Are you a FIFA Legend?">
+    <meta name="keywords" content="FIFA World Cup 2022, football quiz, soccer quiz, Qatar 2022, sports, blog">
+    <title>How Well Do You Know the 2022 FIFA World Cup? - King Power Blog</title>
+    <link rel="stylesheet" href="quiz1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXX');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>King Power Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="finance.html">Finance</a></li>
+                <li><a href="travel.html">Travel</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="lifestyle.html">Lifestyle</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <h2>How Well Do You Know the 2022 FIFA World Cup?</h2>
+        <p>Test your football knowledge with our quiz on the Qatar 2022 tournament. From Messi’s magic to Mbappé’s hat-trick, see if you’re a FIFA Legend!</p>
+    </section>
+
+    <section class="quiz-section" id="quiz">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <h2>World Cup Quiz Time!</h2>
+        <div id="quiz-container">
+            <div id="question"></div>
+            <div id="options"></div>
+            <button id="next-button" disabled>Next</button>
+        </div>
+        <div id="results" style="display: none;">
+            <h3>Your World Cup Knowledge Score</h3>
+            <div id="result-text"></div>
+            <div id="result-image"></div>
+            <div class="share-buttons">
+                <h4>Share Your Score</h4>
+                <a href="#" class="share-button x-share" onclick="shareToX()">X</a>
+                <a href="#" class="share-button facebook-share" onclick="shareToFacebook()">Facebook</a>
+                <a href="#" class="share-button instagram-share" onclick="shareToInstagram()">Instagram</a>
+                <a href="#" class="share-button threads-share" onclick="shareToThreads()">Threads</a>
+            </div>
+            <a id="related-post" href="world-cup-moments.html">Relive the 2022 World Cup Moments</a>
+            <button id="restart-button">Try Again</button>
+        </div>
+    </section>
+
+    <section class="about-author">
+        <h2>About the Author</h2>
+        <p>John Doe is a passionate writer covering sports, finance, travel, technology, and lifestyle. With over a decade of experience, he brings insights and stories to inspire and inform readers worldwide.</p>
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+        <p>© 2025 King Power Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="quiz1.js"></script>
+</body>
+</html>
